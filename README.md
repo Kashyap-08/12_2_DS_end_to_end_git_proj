@@ -73,6 +73,12 @@ git pull
 bash your_file_name.sh
 ```
 
+# Run the python template that will create all the required files and folder required for Industry Grade Project
+## Its a standard templat used for any porject
+```
+python template.py
+```
+
 # install your local package onto virtual environment
 
 ## Method 1
