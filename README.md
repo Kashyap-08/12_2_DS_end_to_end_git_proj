@@ -1,12 +1,12 @@
 # Data Science end to end Project
 
 ## Project Componsents/Pipeline (Hierarchy of a complete project):
-* Data Ingestion
-* EDA
-* Feature Engineering
-* Model Selection
-* Model Building
-* Evaluation
+📌 Clean and preprocess the data
+📌 Do Exploratory Data Analysis (EDA) to get some insight into data
+📌 Do Feature Engineering
+📌 Build a model i.e Regression Analysis
+📌 Evaluate the model
+📌 Go back to any of the previous steps unless the result is sufficient.
 
 ### Necessary files for project
 * Logger file
