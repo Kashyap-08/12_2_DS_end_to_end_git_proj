@@ -53,6 +53,12 @@ class DataIngestion:
             test.to_csv(test_path, index=False)
             logging.info(f"Saved Test data to path: {test_path}")
 
+            logging.info("Return Data path for train and test datsets")
+            return (
+                self.ingestion_config.train_data_path,
+                self.ingestion_config.test_data_path
+            )
+
         except Exception as e:
             logging.info("Exception during Data Ingestion Step")
             raise customException(e, sys)
