@@ -1,4 +1,124 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Details Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="diamondForm" action="{{ url_for('predict_datapoint') }}" method="POST">
+        <label for="carat">Carat:</label>
+        <input type="text" id="carat" name="carat" placeholder="Enter carat value (float)" required>
+
+        <label for="depth">Depth:</label>
+        <input type="text" id="depth" name="depth" placeholder="Enter depth value (float)" required>
+
+        <label for="table">Table:</label>
+        <input type="text" id="table" name="table" placeholder="Enter table value (float)" required>
+
+        <label for="x">X:</label>
+        <input type="text" id="x" name="x" placeholder="Enter x value (float)" required>
+
+        <label for="y">Y:</label>
+        <input type="text" id="y" name="y" placeholder="Enter y value (float)" required>
+
+        <label for="z">Z:</label>
+        <input type="text" id="z" name="z" placeholder="Enter z value (float)" required>
+
+        <label for="cut">Cut:</label>
+        <select id="cut" name="cut">
+            <option value="Fair">Fair</option>
+            <option value="Good">Good</option>
+            <option value="Very Good">Very Good</option>
+            <option value="Premium">Premium</option>
+            <option value="Ideal">Ideal</option>
+        </select>
+
+        <label for="color">Color:</label>
+        <select id="color" name="color">
+            <option value="D">D</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="G">G</option>
+            <option value="H">H</option>
+            <option value="I">I</option>
+            <option value="J">J</option>
+        </select>
+
+        <label for="clarity">Clarity:</label>
+        <select id="clarity" name="clarity">
+            <option value="I1">I1</option>
+            <option value="SI2">SI2</option>
+            <option value="SI1">SI1</option>
+            <option value="VS2">VS2</option>
+            <option value="VS1">VS1</option>
+            <option value="VVS2">VVS2</option>
+            <option value="VVS1">VVS1</option>
+            <option value="IF">IF</option>
+        </select>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <!-- <script>
+        function submitForm() {
+            // You can handle form submission logic here
+            var form = document.getElementById("diamondForm");
+            var formData = new FormData(form);
+
+            // Displaying form data for demonstration purposes
+            for (var pair of formData.entries()) {
+                console.log(pair[0] + ': ' + pair[1]);
+            }
+        }
+    </script> -->
+</body>
+</html>
+
+
+
+
+
+
+
+<!-- <html>
 <body>
 <form action="{{url_for('predict_datapoint')}}" method="POST">
     <div class="form-group">
@@ -73,4 +193,4 @@
   <input type="submit" value="Submit">
 </form>
 </body>
-</html>
+</html> -->
